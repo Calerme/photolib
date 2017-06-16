@@ -419,7 +419,7 @@ window.addEventListener('orientationchange', function () {
 
 // 增加图片点击放大效果
 var oMask = document.getElementById('mask');
-document.body.addEventListener('touchstart', function (e) {
+document.body.addEventListener('click', function (e) {
     var elem = e.target;
     var newImg = null;
     var btn = oMask.getElementsByTagName('i')[0];
@@ -563,7 +563,7 @@ ibtn.addEventListener('touchstart' ,function (e) {
 oMask.getElementsByClassName('fa-remove')[0].addEventListener('touchstart',
         function () {
             this.style.display = 'none';
-            
+
             document.documentElement.style.height =
                 document.body.style.height = 'auto';
             document.documentElement.style.overflow =
