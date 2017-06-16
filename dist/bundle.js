@@ -123,15 +123,16 @@ module.exports = insertImg;
 var insertAImg = __webpack_require__(1);
 var preLoadImg = __webpack_require__(3);
 var isOut = __webpack_require__(4);
+var isSingle = __webpack_require__(0);
+var getLowestW3Third = __webpack_require__(8);
 
 function loadImgs(item) {
-
+    var theLoading = document.
+            getElementById('loading-img');
     if (isOut()) {
         return;
     }
     if (item.num + 1> item.len) {
-        var theLoading = document.
-                getElementById('loading-img');
         theLoading.style.display = 'none';
         return;
     }
@@ -144,6 +145,16 @@ function loadImgs(item) {
     document.body.dataset.onLoad = '';
     newImg.onload = function () {
         insertAImg(newImg);
+        // 确定loading-img的位置
+        if (isSingle()) {
+            document.getElementsByClassName('w3-third')[0].
+            appendChild(theLoading);
+        } else {
+            getLowestW3Third(document.
+            getElementsByClassName('w3-third')).
+            appendChild(theLoading);
+        }
+
         item.num++;
 
         // 将当前状态改为图片加载完
@@ -221,7 +232,6 @@ function composeImages() {
     arrImg.sort(function (a,b) {
         var aNum = parseInt(/[0-9]+\./.exec(a.src)[0]);
         var bNum = parseInt(/[0-9]+\./.exec(b.src)[0]);
-        console.log(aNum,bNum)
         return aNum > bNum;
     });
 
@@ -490,6 +500,8 @@ document.body.addEventListener('click', function (e) {
             if (bigImg.offsetWidth > oMask.offsetWidth) {
                 oMask.scrollLeft = (bigImg.offsetWidth -
                         oMask.offsetWidth) / 2;
+                oMask.scrollTop = (bigImg.offsetHeight -
+                    oMask.offsetHeight) / 2;
             }
 
         } else {
@@ -531,6 +543,8 @@ ibtn.addEventListener('touchstart' ,function () {
         if (bigImg.offsetWidth > oMask.offsetWidth) {
             oMask.scrollLeft = (bigImg.offsetWidth -
                 oMask.offsetWidth) / 2;
+            oMask.scrollTop = (bigImg.offsetHeight -
+                oMask.offsetHeight) / 2;
         }
 
     } else {
