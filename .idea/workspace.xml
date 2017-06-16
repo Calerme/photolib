@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c36698a8-c32b-4852-96d9-97ccd8a3e85e" name="Default" comment="" />
+    <list default="true" id="c36698a8-c32b-4852-96d9-97ccd8a3e85e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/index.js" afterPath="$PROJECT_DIR$/lib/app/index.js" />
+    </list>
     <ignored path="PhotosOfATA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -154,12 +156,12 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/app/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="131">
-                  <caret line="177" column="33" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
+                <state relative-caret-position="275">
+                  <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
                   <folding>
-                    <element signature="e#2620#3878#0" expanded="false" />
-                    <element signature="e#3924#4519#0" expanded="false" />
-                    <element signature="e#5485#5739#0" expanded="false" />
+                    <element signature="e#2628#3886#0" expanded="false" />
+                    <element signature="e#3932#4527#0" expanded="false" />
+                    <element signature="e#5493#5747#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -446,12 +448,12 @@
       <workItem from="1497317460720" duration="4248000" />
       <workItem from="1497405559870" duration="24675000" />
       <workItem from="1497490195390" duration="15750000" />
-      <workItem from="1497575746244" duration="21467000" />
+      <workItem from="1497575746244" duration="21795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142732000" />
+    <option name="totallyTimeSpent" value="143060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -883,12 +885,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="177" column="33" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
+        <state relative-caret-position="275">
+          <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
           <folding>
-            <element signature="e#2620#3878#0" expanded="false" />
-            <element signature="e#3924#4519#0" expanded="false" />
-            <element signature="e#5485#5739#0" expanded="false" />
+            <element signature="e#2628#3886#0" expanded="false" />
+            <element signature="e#3932#4527#0" expanded="false" />
+            <element signature="e#5493#5747#0" expanded="false" />
           </folding>
         </state>
       </provider>
