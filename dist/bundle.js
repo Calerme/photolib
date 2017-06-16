@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -96,7 +96,7 @@ module.exports = isSingle;
 // 用来插入一张图片的函数
 // 函数将接收一个img对象作为参数
 var isSingle = __webpack_require__(0);
-var getLowestW3Third = __webpack_require__(7);
+var getLowestW3Third = __webpack_require__(8);
 
 function insertImg(img) {
     var w3Thirds = document.querySelectorAll(
@@ -121,8 +121,8 @@ module.exports = insertImg;
 // 且图片计数未完就再加载一张
 
 var insertAImg = __webpack_require__(1);
-var preLoadImg = __webpack_require__(9);
-var isOut = __webpack_require__(3);
+var preLoadImg = __webpack_require__(3);
+var isOut = __webpack_require__(4);
 
 function loadImgs(item) {
 
@@ -158,6 +158,23 @@ module.exports = loadImgs;
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 预加载一张图片
+var insertAImg = __webpack_require__(1);
+
+function loadImg(file, num, fn) {
+    var newImg = document.createElement('img');
+    newImg.src = './img/'+ file +'/small/' + num + '.jpg';
+    newImg.classList.add('materialboxed');
+
+    return newImg;
+}
+
+module.exports = loadImg;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 // 判断三个w3-third是不是超出了视口
@@ -177,7 +194,7 @@ function isOut() {
 module.exports = isOut;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 所有图片重新排列函数
@@ -229,14 +246,14 @@ module.exports = composeImages;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 初始化页面
 // 用于页面初次载入
 // 选择相应菜单变更图片内容
 // len=图片总数量,file=文件夹的名字，num=图片计数
-var isOut = __webpack_require__(3);
+var isOut = __webpack_require__(4);
 var loadImgs = __webpack_require__(2);
 
 function initImages(w3Thirds, item) {
@@ -253,7 +270,7 @@ module.exports = initImages;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -275,7 +292,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 // 获得最低的w3-third
@@ -299,16 +316,16 @@ function getLowestW3Third(w3Thirds) {
 module.exports = getLowestW3Third;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var slidebarToggle = __webpack_require__(6);
-var initImages = __webpack_require__(5);
-var preLoadImg = __webpack_require__(9);
+var slidebarToggle = __webpack_require__(7);
+var initImages = __webpack_require__(6);
+var preLoadImg = __webpack_require__(3);
 var loadImgs = __webpack_require__(2);
-var composeImages = __webpack_require__(4);
+var composeImages = __webpack_require__(5);
 var isSingle = __webpack_require__(0);
 
 // 菜单显示隐藏 & 菜单项目active变更与图片初始化
@@ -423,29 +440,26 @@ document.body.addEventListener('click', function (e) {
 
 
             setTimeout(function () {
+                // 高度未撑满的图片垂直居中
+                if (newImg.offsetHeight < window.innerHeight) {
+                    newImg.style.top = (window.innerHeight -
+                        newImg.offsetHeight) / 2 + 'px';
+                }
             },400);
 
             // 放大缩小按钮显示
             btn.style.display = 'block';
+
+            return;
         };
-
-        // 遮罩层放大后禁止body滚动
-        oMask.addEventListener('transitionend', function () {
-            if (this.classList.contains('final')) {
-                document.body.style.overflow = 'hidden';
-            }
-
-            // 高度未撑满的图片垂直居中
-            if (newImg.offsetHeight < window.innerHeight) {
-                newImg.style.top = (window.innerHeight -
-                        newImg.offsetHeight) / 2 + 'px';
-            }
-        });
     }
 
     // 点击图片缩小
     if (elem.id === 'bigImg') {
-        document.body.style.overflow = 'auto';
+        document.documentElement.style.height =
+            document.body.style.height = 'auto';
+        document.documentElement.style.overflow =
+            document.body.style.overflow = 'auto';
         document.body.scrollTop = document.body.dataset.STop;
         oMask.classList.remove('final');
         setTimeout(function () {
@@ -456,6 +470,8 @@ document.body.addEventListener('click', function (e) {
         btn.style.display = 'none';
         btn.classList.remove('fa-search-minus');
         btn.classList.add('fa-search-plus');
+
+        return;
     }
 
     // 放大缩小按钮事件
@@ -474,10 +490,6 @@ document.body.addEventListener('click', function (e) {
                 oMask.scrollLeft = (bigImg.offsetWidth -
                         oMask.offsetWidth) / 2;
             }
-            if (bigImg.offsetHeight > oMask.offsetHeight) {
-                oMask.scrollTop = (bigImg.offsetWidth -
-                        oMask.offsetHeight) / 2;
-            }
 
         } else {
 
@@ -488,22 +500,46 @@ document.body.addEventListener('click', function (e) {
     }
 });
 
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
 
-// 预加载一张图片
-var insertAImg = __webpack_require__(1);
+// 遮罩层放大后禁止body滚动
+oMask.addEventListener('transitionend', function () {
 
-function loadImg(file, num, fn) {
-    var newImg = document.createElement('img');
-    newImg.src = './img/'+ file +'/small/' + num + '.jpg';
-    newImg.classList.add('materialboxed');
+    if (this.classList.contains('final')) {
+        document.documentElement.style.height =
+            document.body.style.height = '100%';
+        document.documentElement.style.overflow =
+            document.body.style.overflow = 'hidden';
+    }
+});
 
-    return newImg;
-}
+// 放大缩小按钮
+// 与body代理的事件一致，只是为了兼容移动端
+var ibtn = oMask.getElementsByTagName('i')[0];
+ibtn.addEventListener('touchstart' ,function () {
+    var elem = this;
+    var bigImg = this.parentNode.querySelector('img#bigImg');
+    // 放大缩小按钮事件
+    if (elem.classList.contains('fa-search-plus')) {
 
-module.exports = loadImg;
+        elem.classList.remove('fa-search-plus');
+        elem.classList.add('fa-search-minus');
+        bigImg.dataset.styles = bigImg.style.cssText;
+        bigImg.style.cssText = '';
+
+        // 把图片放大后居中
+        if (bigImg.offsetWidth > oMask.offsetWidth) {
+            oMask.scrollLeft = (bigImg.offsetWidth -
+                oMask.offsetWidth) / 2;
+        }
+
+    } else {
+
+        elem.classList.remove('fa-search-minus');
+        elem.classList.add('fa-search-plus');
+        bigImg.style.cssText = bigImg.dataset.styles;
+    }
+
+})
 
 /***/ })
 /******/ ]);
