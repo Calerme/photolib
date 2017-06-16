@@ -69,10 +69,10 @@ img {
     color: rgba(255,255,255,1);
     background-color: rgba(0,0,0,.5);
     display: none;
-    overflow: hidden;
 }
 
 #mask i.fa-remove {
+    height: 50px;
     top: 0;
     right: 0;
 }
