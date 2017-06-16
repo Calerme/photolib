@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c36698a8-c32b-4852-96d9-97ccd8a3e85e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js.map" afterPath="$PROJECT_DIR$/dist/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/img-loading.gif" afterPath="$PROJECT_DIR$/img/img-loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/composeImages.js" afterPath="$PROJECT_DIR$/lib/app/composeImages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/index.js" afterPath="$PROJECT_DIR$/lib/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/loadImgs.js" afterPath="$PROJECT_DIR$/lib/app/loadImgs.js" />
     </list>
     <ignored path="PhotosOfATA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +25,7 @@
     <favorites_list name="PhotosOfATA" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6609524">
+    <splitter split-orientation="horizontal" split-proportion="0.2920635">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -61,7 +57,7 @@
           <file leaf-file-name="loadImgs.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/app/loadImgs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="259">
+                <state relative-caret-position="475">
                   <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -148,26 +144,25 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="preLoadImg.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="preLoadImg.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/app/preLoadImg.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+                <state relative-caret-position="216">
+                  <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/app/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="383">
-                  <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
+                <state relative-caret-position="599">
+                  <caret line="198" column="24" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
                   <folding>
-                    <element signature="e#2615#3873#0" expanded="false" />
-                    <element signature="e#3919#4514#0" expanded="false" />
-                    <element signature="e#5480#5734#0" expanded="false" />
-                    <element signature="e#5869#6654#0" expanded="false" />
+                    <element signature="e#2620#3878#0" expanded="false" />
+                    <element signature="e#3924#4519#0" expanded="false" />
+                    <element signature="e#5485#5739#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -226,8 +221,8 @@
         <option value="$PROJECT_DIR$/lib/custom/main.css" />
         <option value="$PROJECT_DIR$/lib/app/preLoadImg.js" />
         <option value="$PROJECT_DIR$/lib/app/composeImages.js" />
-        <option value="$PROJECT_DIR$/lib/app/index.js" />
         <option value="$PROJECT_DIR$/lib/app/loadImgs.js" />
+        <option value="$PROJECT_DIR$/lib/app/index.js" />
       </list>
     </option>
   </component>
@@ -454,12 +449,12 @@
       <workItem from="1497317460720" duration="4248000" />
       <workItem from="1497405559870" duration="24675000" />
       <workItem from="1497490195390" duration="15750000" />
-      <workItem from="1497575746244" duration="19959000" />
+      <workItem from="1497575746244" duration="21285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141224000" />
+    <option name="totallyTimeSpent" value="142550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -855,27 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
-          <folding>
-            <element signature="e#2615#3873#0" expanded="false" />
-            <element signature="e#3919#4514#0" expanded="false" />
-            <element signature="e#5480#5734#0" expanded="false" />
-            <element signature="e#5869#6654#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app/preLoadImg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/custom/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -894,10 +868,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/app/loadImgs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
+        <state relative-caret-position="475">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/preLoadImg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="198" column="24" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
+          <folding>
+            <element signature="e#2620#3878#0" expanded="false" />
+            <element signature="e#3924#4519#0" expanded="false" />
+            <element signature="e#5485#5739#0" expanded="false" />
           </folding>
         </state>
       </provider>
