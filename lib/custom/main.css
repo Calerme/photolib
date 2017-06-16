@@ -56,7 +56,8 @@ img {
     transition: 0.2s;
 }
 #mask i.fa-search-plus,
-#mask i.fa-search-minus{
+#mask i.fa-search-minus,
+#mask i.fa-remove{
     font-size: 30px;
     position: fixed;
     right: 0;
@@ -68,8 +69,16 @@ img {
     color: rgba(255,255,255,1);
     background-color: rgba(0,0,0,.5);
     display: none;
+    overflow: hidden;
 }
+
+#mask i.fa-remove {
+    top: 0;
+    right: 0;
+}
+
 #mask i.fa-search-plus:hover,
-#mask i.fa-search-minus:hover {
+#mask i.fa-search-minus:hover,
+#mask i.fa-remove:hover{
     background-color: rgba(0,0,0,.8);
 }
