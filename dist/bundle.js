@@ -10744,10 +10744,16 @@ $(document).ready(function () {
             newImg = document.createElement('img');
             newImg.id = 'bigImg';
             newImg.src = elem.src.replace('/small', '');
+
+            // 之前这里的代码是放在newImg.onload中的
+            // 但考虑到加载速度
+            // 使图片在加载的过程中就可以显示一部分
+            // 保留浏览者的耐心
+            oMask.appendChild(newImg);
+            newImg.style.width = '100%';
+
             newImg.onload = function () {
                 oMask.style.backgroundImage = 'none';
-                oMask.appendChild(newImg);
-                newImg.style.width = '100%';
                 oMask.getElementsByClassName('fa-remove')[0].style.display = '';
 
 

@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c36698a8-c32b-4852-96d9-97ccd8a3e85e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js.map" afterPath="$PROJECT_DIR$/dist/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/composeImages.js" afterPath="$PROJECT_DIR$/lib/app/composeImages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/index.js" afterPath="$PROJECT_DIR$/lib/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app/initImages.js" afterPath="$PROJECT_DIR$/lib/app/initImages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/custom/main.css" afterPath="$PROJECT_DIR$/lib/custom/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="PhotosOfATA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,14 +40,14 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/app/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+            <state relative-caret-position="648">
+              <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
               <folding>
                 <element signature="e#974#1822#0" expanded="false" />
-                <element signature="e#6891#7173#0" expanded="false" />
-                <element signature="e#7317#8447#0" expanded="false" />
-                <element signature="e#8561#9068#0" expanded="false" />
-                <element signature="e#9167#9674#0" expanded="false" />
+                <element signature="e#7008#7290#0" expanded="false" />
+                <element signature="e#7434#8564#0" expanded="false" />
+                <element signature="e#8678#9185#0" expanded="false" />
+                <element signature="e#9284#9791#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,7 +86,7 @@
       <file leaf-file-name="loadImgs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/app/loadImgs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
+            <state relative-caret-position="864">
               <caret line="42" column="21" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -414,12 +408,12 @@
       <workItem from="1497490195390" duration="15750000" />
       <workItem from="1497575746244" duration="23502000" />
       <workItem from="1497614326149" duration="102000" />
-      <workItem from="1497661539220" duration="18826000" />
+      <workItem from="1497661539220" duration="19926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163695000" />
+    <option name="totallyTimeSpent" value="164795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -773,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app/loadImgs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/app/isSingle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -807,16 +791,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app/loadImgs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+        <state relative-caret-position="648">
+          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
           <folding>
             <element signature="e#974#1822#0" expanded="false" />
-            <element signature="e#6891#7173#0" expanded="false" />
-            <element signature="e#7317#8447#0" expanded="false" />
-            <element signature="e#8561#9068#0" expanded="false" />
-            <element signature="e#9167#9674#0" expanded="false" />
+            <element signature="e#7008#7290#0" expanded="false" />
+            <element signature="e#7434#8564#0" expanded="false" />
+            <element signature="e#8678#9185#0" expanded="false" />
+            <element signature="e#9284#9791#0" expanded="false" />
           </folding>
         </state>
       </provider>
