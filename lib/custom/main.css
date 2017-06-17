@@ -44,7 +44,7 @@ img {
     height: 100% !important;
     left: 0 !important;
     top: 0 !important;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     opacity: 1;
     /*background-image: none;*/
     transition: .2s;
