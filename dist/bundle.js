@@ -141,6 +141,7 @@ function loadImgs(item) {
     // 那就不执行之后的代码
     if (!document.body.dataset.onLoad) return;
     var newImg = preLoadImg(item.file, item.num + 1);
+
     // 新图片设置src之后，状态改为未加载完
     document.body.dataset.onLoad = '';
     newImg.onload = function () {
@@ -10788,24 +10789,38 @@ $(document).ready(function () {
             btn.style.display = 'none';
             btn.classList.remove('fa-search-minus');
             btn.classList.add('fa-search-plus');
+            btn.getElementsByTagName('span')[0].innerText =
+                btn.getElementsByTagName('span')[0].innerText.replace('缩小','放大');
 
             return;
         }
 
         // 放大缩小按钮事件
         if (elem.classList.contains('fa-search-plus') ||
-            elem.classList.contains('fa-search-minus')) {
+            elem.classList.contains('fa-search-minus') ||
+            elem.parentNode.classList.contains('fa-search-plus') ||
+            elem.parentNode.classList.contains('fa-search-minus')) {
+
+            if (elem.nodeName === 'SPAN') {
+                elem = elem.parentNode;
+            }
 
             if (elem.classList.contains('fa-search-plus')) {
 
                 elem.classList.remove('fa-search-plus');
                 elem.classList.add('fa-search-minus');
+                elem.getElementsByTagName('span')[0].innerText =
+                        elem.getElementsByTagName('span')[0].innerText.replace('放大','缩小');
                 bigImg.dataset.styles = bigImg.style.cssText;
 
-                // 如果图片本身的宽度小于windth: 100%时的完宽度
+                // 如果图片本身的宽度小于 width: 100% 时的完宽度
                 // 那就不清除cssText
+                // 且把它的宽度放大150%
+                // 造成放大的假想
                 if (bigImg.naturalWidth > bigImg.offsetWidth) {
                     bigImg.style.cssText = '';
+                } else {
+                    bigImg.style.width = '150%';
                 }
 
                 // 把图片放大后居中
@@ -10820,6 +10835,8 @@ $(document).ready(function () {
 
                 elem.classList.remove('fa-search-minus');
                 elem.classList.add('fa-search-plus');
+                elem.getElementsByTagName('span')[0].innerText =
+                    elem.getElementsByTagName('span')[0].innerText.replace('缩小','放大');
                 bigImg.style.cssText = bigImg.dataset.styles;
 
                 oMask.scrollLeft = oMask.scrollTop = 0;
@@ -10841,43 +10858,43 @@ $(document).ready(function () {
 
 // 放大缩小按钮
 // 与body代理的事件一致，只是为了兼容移动端
-    var ibtn = oMask.getElementsByTagName('i')[0];
-    ibtn.addEventListener('touchstart', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var elem = this;
-        var bigImg = this.parentNode.querySelector('img#bigImg');
-        // 放大缩小按钮事件
-        if (elem.classList.contains('fa-search-plus')) {
-
-            elem.classList.remove('fa-search-plus');
-            elem.classList.add('fa-search-minus');
-            bigImg.dataset.styles = bigImg.style.cssText;
-
-            // 如果图片本身的宽度小于windth: 100%时的完宽度
-            // 那就不清除cssText
-            if (bigImg.naturalWidth > bigImg.offsetWidth) {
-                bigImg.style.cssText = '';
-            }
-
-            // 把图片放大后居中
-            if (bigImg.offsetWidth > oMask.offsetWidth) {
-                oMask.scrollLeft = (bigImg.offsetWidth -
-                    oMask.offsetWidth) / 2;
-                oMask.scrollTop = (bigImg.offsetHeight -
-                    oMask.offsetHeight) / 2;
-            }
-
-        } else {
-
-            elem.classList.remove('fa-search-minus');
-            elem.classList.add('fa-search-plus');
-            bigImg.style.cssText = bigImg.dataset.styles;
-
-            oMask.scrollLeft = oMask.scrollTop = 0;
-        }
-
-    });
+//     var ibtn = oMask.getElementsByTagName('i')[0];
+//     ibtn.addEventListener('touchstart', function (e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         var elem = this;
+//         var bigImg = this.parentNode.querySelector('img#bigImg');
+//         // 放大缩小按钮事件
+//         if (elem.classList.contains('fa-search-plus')) {
+//
+//             elem.classList.remove('fa-search-plus');
+//             elem.classList.add('fa-search-minus');
+//             bigImg.dataset.styles = bigImg.style.cssText;
+//
+//             // 如果图片本身的宽度小于windth: 100%时的完宽度
+//             // 那就不清除cssText
+//             if (bigImg.naturalWidth > bigImg.offsetWidth) {
+//                 bigImg.style.cssText = '';
+//             }
+//
+//             // 把图片放大后居中
+//             if (bigImg.offsetWidth > oMask.offsetWidth) {
+//                 oMask.scrollLeft = (bigImg.offsetWidth -
+//                     oMask.offsetWidth) / 2;
+//                 oMask.scrollTop = (bigImg.offsetHeight -
+//                     oMask.offsetHeight) / 2;
+//             }
+//
+//         } else {
+//
+//             elem.classList.remove('fa-search-minus');
+//             elem.classList.add('fa-search-plus');
+//             bigImg.style.cssText = bigImg.dataset.styles;
+//
+//             oMask.scrollLeft = oMask.scrollTop = 0;
+//         }
+//
+//     });
 
 // 关闭Mask
     oMask.getElementsByClassName('fa-remove')[0].addEventListener('touchstart',
