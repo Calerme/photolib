@@ -178,7 +178,7 @@ var insertAImg = __webpack_require__(1);
 function loadImg(file, num, fn) {
     var newImg = document.createElement('img');
     // newImg.src = './img/'+ file +'/small/' + num + '.jpg';
-    newImg.src = 'http://ormsmntmt.bkt.clouddn.com/img/'+ file +'/small/' + num + '.jpg';
+    newImg.src = 'http://ortoenmme.bkt.clouddn.com/img/'+ file +'/small/' + num + '.jpg';
     newImg.classList.add('materialboxed');
 
     return newImg;
