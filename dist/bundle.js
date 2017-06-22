@@ -10712,7 +10712,7 @@ $(document).ready(function () {
         }, 400);
     });
 
-// 增加图片点击放大效果
+    // 增加图片点击放大效果
     var oMask = document.getElementById('mask');
     var newImg = null;
     document.body.addEventListener('click', function (e) {
@@ -10755,7 +10755,6 @@ $(document).ready(function () {
 
             newImg.onload = function () {
                 oMask.style.backgroundImage = 'none';
-                oMask.getElementsByClassName('fa-remove')[0].style.display = '';
 
 
                 setTimeout(function () {
@@ -10774,26 +10773,26 @@ $(document).ready(function () {
         }
 
         // 点击图片缩小
-        if (elem.id === 'bigImg') {
-            document.documentElement.style.height =
-                document.body.style.height = 'auto';
-            document.documentElement.style.overflow =
-                document.body.style.overflow = 'auto';
-            document.body.scrollTop = document.body.dataset.STop;
-            oMask.classList.remove('final');
-            setTimeout(function () {
-                oMask.style.cssText = '';
-            }, 200); // 这是200是根据css中的transition得出的
-
-            // 放大缩小按钮隐藏重置
-            btn.style.display = 'none';
-            btn.classList.remove('fa-search-minus');
-            btn.classList.add('fa-search-plus');
-            btn.getElementsByTagName('span')[0].innerText =
-                btn.getElementsByTagName('span')[0].innerText.replace('缩小','放大');
-
-            return;
-        }
+        // if (elem.id === 'bigImg') {
+        //     document.documentElement.style.height =
+        //         document.body.style.height = 'auto';
+        //     document.documentElement.style.overflow =
+        //         document.body.style.overflow = 'auto';
+        //     document.body.scrollTop = document.body.dataset.STop;
+        //     oMask.classList.remove('final');
+        //     setTimeout(function () {
+        //         oMask.style.cssText = '';
+        //     }, 200); // 这是200是根据css中的transition得出的
+        //
+        //     // 放大缩小按钮隐藏重置
+        //     btn.style.display = 'none';
+        //     btn.classList.remove('fa-search-minus');
+        //     btn.classList.add('fa-search-plus');
+        //     btn.getElementsByTagName('span')[0].innerText =
+        //         btn.getElementsByTagName('span')[0].innerText.replace('缩小','放大');
+        //
+        //     return;
+        // }
 
         // 放大缩小按钮事件
         if (elem.classList.contains('fa-search-plus') ||
@@ -10856,61 +10855,8 @@ $(document).ready(function () {
         }
     });
 
-// 放大缩小按钮
-// 与body代理的事件一致，只是为了兼容移动端
-//     var ibtn = oMask.getElementsByTagName('i')[0];
-//     ibtn.addEventListener('touchstart', function (e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         var elem = this;
-//         var bigImg = this.parentNode.querySelector('img#bigImg');
-//         // 放大缩小按钮事件
-//         if (elem.classList.contains('fa-search-plus')) {
-//
-//             elem.classList.remove('fa-search-plus');
-//             elem.classList.add('fa-search-minus');
-//             bigImg.dataset.styles = bigImg.style.cssText;
-//
-//             // 如果图片本身的宽度小于windth: 100%时的完宽度
-//             // 那就不清除cssText
-//             if (bigImg.naturalWidth > bigImg.offsetWidth) {
-//                 bigImg.style.cssText = '';
-//             }
-//
-//             // 把图片放大后居中
-//             if (bigImg.offsetWidth > oMask.offsetWidth) {
-//                 oMask.scrollLeft = (bigImg.offsetWidth -
-//                     oMask.offsetWidth) / 2;
-//                 oMask.scrollTop = (bigImg.offsetHeight -
-//                     oMask.offsetHeight) / 2;
-//             }
-//
-//         } else {
-//
-//             elem.classList.remove('fa-search-minus');
-//             elem.classList.add('fa-search-plus');
-//             bigImg.style.cssText = bigImg.dataset.styles;
-//
-//             oMask.scrollLeft = oMask.scrollTop = 0;
-//         }
-//
-//     });
 
 // 关闭Mask
-    oMask.getElementsByClassName('fa-remove')[0].addEventListener('touchstart',
-        function () {
-            this.style.display = 'none';
-            document.documentElement.style.height =
-                document.body.style.height = 'auto';
-            document.documentElement.style.overflow =
-                document.body.style.overflow = 'auto';
-            document.body.scrollTop = document.body.dataset.STop;
-            oMask.classList.remove('final');
-            setTimeout(function () {
-                oMask.style.cssText = '';
-            }, 200); // 这是200是根据css中的transition得出的
-        });
-
     oMask.getElementsByClassName('fa-remove')[0].addEventListener('click',
         function () {
             this.style.display = 'none';
