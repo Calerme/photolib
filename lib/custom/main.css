@@ -82,3 +82,18 @@ img {
 #mask i.fa-remove:hover{
     background-color: rgba(0,0,0,.8);
 }
+
+.pinch-zoom-container {
+    width: 100%;
+    height: 100% !important;
+}
+
+#imgContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+#imgContainer img {
+display: block;
+}

@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'inline-eval-source-map',
     entry: './lib/app/index.js',
     output: {
         filename: 'bundle.js',

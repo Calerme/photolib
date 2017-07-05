@@ -65,7 +65,9 @@
 </div>
 
 <div id="mask" data-db-toggle="">
-    <img id="bigImg" src="" alt="">
+    <div id="imgContainer">
+        <img id="bigImg" src="" alt="">
+    </div>
     <i class="fa fa-search-plus"><span style="font-size: 16px; vertical-align: 40%;">&nbsp;&nbsp;点击放大</span></i>
     <i class="fa fa-remove"></i>
 </div>
@@ -74,6 +76,14 @@
     <img style="width: 30%;" src="./img/qcode.svg" alt="">
     <p class="w3-medium">&copy; 2017 亚学会</p>
 </footer>
+
+<script src="jquery-1.7.2.min.js"></script>
+<script src="pinchzoom.js"></script>
+<script>
+function pinchzoom() {
+    new RTP.PinchZoom($('#imgContainer'), {lockDragAxis: true, maxZoom: 10});
+}
+</script>
 
 <script src="./dist/bundle.js"></script>
 </body>
